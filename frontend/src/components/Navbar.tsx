@@ -1,6 +1,6 @@
 /*!
- * Bloodline Blood Bank Management System
- * Copyright (c) 2025 Onaliy Jayawardana
+ * Olish Beauty Care & Cosmetics Official Website
+ * Copyright (c) 2025 Olish Beauty Care & Cosmetics (Pvt) Ltd.
  * All rights reserved.
  *
  * Unauthorized copying, modification, or distribution of this code is prohibited.
@@ -20,9 +20,7 @@ export function Navigationbar({
 }) {
   return (
     <Navbar fluid rounded>
-      <Navbar.Brand
-        className="md:ml-24 h-6 sm:h-9"
-      >
+      <Navbar.Brand className="md:ml-24 h-6 sm:h-9">
         <img
           src="src/assets/logo.png"
           className="mr-3 h-6 sm:h-9"
