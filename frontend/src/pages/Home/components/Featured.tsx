@@ -1,3 +1,10 @@
+/*!
+ * Olish Beauty Care & Cosmetics Official Website
+ * Copyright (c) 2025 Olish Beauty Care & Cosmetics (Pvt) Ltd.
+ * All rights reserved.
+ *
+ * Unauthorized copying, modification, or distribution of this code is prohibited.
+ */
 import { useState, useEffect } from "react";
 import { database, get } from "../../../firebase";
 import { ref } from "firebase/database";
