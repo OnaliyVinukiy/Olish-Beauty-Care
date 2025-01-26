@@ -6,7 +6,7 @@
  * Unauthorized copying, modification, or distribution of this code is prohibited.
  */
 import { CarouselSlider } from "./components/Carousel";
-import FeaturedProducts from "./components/Featured";
+import { FeaturedProducts } from "./components/Featured";
 const Home = () => {
   return (
     <div>
