@@ -60,10 +60,10 @@ export function Navigationbar({
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="#" className="text-lg font-medium" active>
+        <Navbar.Link href="/" className="text-lg font-medium" active>
           Home
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-lg font-medium">
+        <Navbar.Link href="/serums" className="text-lg font-medium">
           Face Serums
         </Navbar.Link>
         <Navbar.Link href="#" className="text-lg font-medium">
