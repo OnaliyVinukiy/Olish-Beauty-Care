@@ -9,6 +9,8 @@ import React, { useState } from "react";
 import { Button, Table } from "flowbite-react";
 import AddFeatured from "./components/AddFeatured";
 import AddSerum from "./components/AddSerum";
+import AddCream from "./components/AddCream";
+
 interface Order {
   id: string;
   customerName: string;
@@ -23,6 +25,7 @@ const handleProductAdded = () => {
 const Dashboard: React.FC = () => {
   const [openModal, setOpenModal] = useState(false);
   const [serumModalOpen, setSerumModalOpen] = useState(false);
+  const [creamModalOpen, setCreamModalOpen] = useState(false);
   const [orderList, setOrderList] = useState<Order[]>([
     {
       id: "1",
@@ -53,7 +56,12 @@ const Dashboard: React.FC = () => {
         <Button className="bg-pink-700" onClick={() => setSerumModalOpen(true)}>
           Add Face Serum
         </Button>
-        <Button className="bg-purple-700">Add Face Cream</Button>
+        <Button
+          className="bg-purple-700"
+          onClick={() => setCreamModalOpen(true)}
+        >
+          Add Face Cream
+        </Button>
         <Button className="bg-orange-700">Add Other Products</Button>
       </div>
       <AddFeatured
@@ -64,6 +72,11 @@ const Dashboard: React.FC = () => {
       <AddSerum
         openModal={serumModalOpen}
         onCloseModal={() => setSerumModalOpen(false)}
+        onProductAdded={handleProductAdded}
+      />
+      <AddCream
+        openModal={creamModalOpen}
+        onCloseModal={() => setCreamModalOpen(false)}
         onProductAdded={handleProductAdded}
       />
 
