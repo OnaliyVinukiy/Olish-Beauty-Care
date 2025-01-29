@@ -11,9 +11,12 @@ const {
   getFeaturedProducts,
   uploadMiddleware,
 } = require("../controllers/featuredProductController");
+const { getSerum, addSerum } = require("../controllers/serumController");
 const router = express.Router();
 
 router.post("/featured", uploadMiddleware, addFeaturedProduct);
 router.get("/featured-products", getFeaturedProducts);
+router.get("/serums", getSerum);
+router.post("/serums", uploadMiddleware, addSerum);
 
 module.exports = router;
