@@ -11,5 +11,5 @@ export interface Product {
   description: string;
   price: number;
   imageUrl: string;
-  quantity?: number; // Add this line
+  quantity?: number;
 }
