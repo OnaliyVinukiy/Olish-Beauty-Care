@@ -49,7 +49,9 @@ export function FeaturedProducts() {
       const existingProduct = prevCart.find((item) => item.id === product.id);
       if (existingProduct) {
         return prevCart.map((item) =>
-          item.id === product.id ? { ...item, quantity: (item.quantity || 1) + 1 } : item
+          item.id === product.id
+            ? { ...item, quantity: (item.quantity || 1) + 1 }
+            : item
         );
       }
       return [...prevCart, { ...product, quantity: 1 }];
@@ -61,31 +63,31 @@ export function FeaturedProducts() {
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
         <div className="mb-4 items-end text-center justify-between space-y-4 sm:flex sm:space-y-0 md:mb-8">
           <div>
-        <h2 className="mt-3 text-xl text-center font-semibold text-gray-900 dark:text-white sm:text-2xl">
-          Featured Products
-        </h2>
+            <h2 className="mt-3 text-xl text-center font-semibold text-gray-900 dark:text-white sm:text-2xl">
+              Featured Products
+            </h2>
           </div>
         </div>
         <div className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
           {products.map((product) => (
             <div
-            key={product.id}
-            className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
-          >
-            <div className="h-56 w-full">
-            <a href="#">
-            <img
+              key={product.id}
+              className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
+            >
+              <div className="h-56 w-full">
+                <a href="#">
+                  <img
                     className="mx-auto h-full dark:hidden"
                     src={product.imageUrl}
                     alt={product.name}
                   />
-              <img
+                  <img
                     className="mx-auto hidden h-full dark:block"
                     src={product.imageUrl}
                     alt={product.name}
                   />
-</a>
-</div>
+                </a>
+              </div>
               <div className="pt-6">
                 <div className="mb-4 flex items-center justify-between gap-4">
                   <div className="flex items-center justify-end gap-1">
@@ -169,11 +171,11 @@ export function FeaturedProducts() {
                   <p className="text-xl font-bold leading-tight text-gray-900 dark:text-white">
                     Rs. {product.price}
                   </p>
-                <button
-                  type="button"
+                  <button
+                    type="button"
                     className="inline-flex items-center rounded-lg bg-cyan-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                     onClick={() => addToCart(product)}
-                >
+                  >
                     <svg
                       className="-ms-2 me-2 h-5 w-5"
                       aria-hidden="true"
@@ -192,7 +194,7 @@ export function FeaturedProducts() {
                       />
                     </svg>
                     Add to cart
-                </button>
+                  </button>
                 </div>
               </div>
             </div>
