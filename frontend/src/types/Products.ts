@@ -6,9 +6,10 @@
  * Unauthorized copying, modification, or distribution of this code is prohibited.
  */
 export interface Product {
-    id: string;
-    name: string;
-    price: number;
-    imageUrl: string;
-  }
-  
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  imageUrl: string;
+  quantity?: number; // Add this line
+}
