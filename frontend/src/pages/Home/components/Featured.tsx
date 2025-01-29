@@ -44,6 +44,7 @@ export function FeaturedProducts() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
+  //Add to cart functionality
   const addToCart = (product: Product) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
