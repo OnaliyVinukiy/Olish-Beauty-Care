@@ -3,6 +3,9 @@ import Home from "./pages/Home/Home";
 import { Navigationbar } from "./components/Navbar";
 import { Login } from "./pages/Home/components/Login";
 import Dashboard from "./pages/Admin/Dashboard";
+import { CartPage } from "./pages/Common/Cart";
+import { Serums } from "./pages/Products/Serums";
+import { Creams } from "./pages/Products/Creams";
 import { useState } from "react";
 
 function App() {
@@ -49,6 +52,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/serums" element={<Serums />} />
+        <Route path="/creams" element={<Creams />} />
       </Routes>
     </Router>
   );
