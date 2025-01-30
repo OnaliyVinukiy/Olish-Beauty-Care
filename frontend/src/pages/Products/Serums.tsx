@@ -77,10 +77,10 @@ export function Serums() {
     }, 1000);
   };
   return (
-    <section className="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-8">
+    <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-8">
       <div className="mb-6 text-center bg-cyan-600 text-white py-3 px-5 shadow-md">
         <p className="text-lg font-semibold">
-          🚚 Hassle-Free & Fast Islandwide Delivery!
+          🚚 Cash on Delivery & Bank Deposit Options | Fast Islandwide Delivery
         </p>
       </div>
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
@@ -92,12 +92,8 @@ export function Serums() {
           </div>
         </div>
         {loading ? (
-          // Flowbite Loading Spinner
           <div className="flex justify-center items-center min-h-[300px]">
-            <div
-              className="inline-block h-10 w-10 animate-spin rounded-full border-4 border-solid border-cyan-600 border-t-transparent"
-              role="status"
-            ></div>
+            <div className="h-12 w-12 animate-spin rounded-full border-4 border-pink-400 border-t-transparent"></div>
           </div>
         ) : (
           <div className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
